@@ -1,0 +1,15 @@
+06/02/2022
+- jedec.c file:
+	- commented out those lines
+	
+	/* Incredibly enough, Lattice has managed to reverse the bits for features... */
+	if (*data_len == 10)
+	{
+	  reverse_bits(*data, 8);
+	  reverse_bits(*data + 8, 2);
+	}
+	else
+	{
+	  fprintf(stderr, "Unexpected data length '%d' for feature row/bits.  Expected 10 bytes.\n", *data_len);
+	  return 0;
+	}
